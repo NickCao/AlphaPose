@@ -163,7 +163,7 @@ def get_install_requires():
         'six', 'terminaltables', 'scipy',
         'opencv-python', 'matplotlib', 'visdom',
         'tqdm', 'tensorboardx', 'easydict',
-        'pyyaml', 'halpecocotools @ git+https://github.com/NickCao/HalpeCOCOAPI.git',
+        'pyyaml', 'halpecocotools @ git+https://github.com/NickCao/HalpeCOCOAPI.git#subdirectory=PythonAPI',
         'torch>=1.1.0', 'torchvision>=0.3.0',
         'munkres', 'timm==0.1.20', 'natsort',
         'cython_bbox @ git+https://github.com/yanfengliu/cython_bbox.git'

@@ -166,7 +166,7 @@ def get_install_requires():
         'pyyaml', 'halpecocotools @ git+https://github.com/NickCao/HalpeCOCOAPI.git#subdirectory=PythonAPI',
         'torch>=1.1.0', 'torchvision>=0.3.0',
         'munkres', 'timm==0.1.20', 'natsort',
-        'cython_bbox @ git+https://github.com/yanfengliu/cython_bbox.git'
+        'cython_bbox @ git+https://github.com/NickCao/cython_bbox.git'
     ]
     # official pycocotools doesn't support Windows, we will install it by third-party git repository later
     if platform.system() != 'Windows':

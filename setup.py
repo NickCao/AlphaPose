@@ -163,9 +163,10 @@ def get_install_requires():
         'six', 'terminaltables', 'scipy',
         'opencv-python', 'matplotlib', 'visdom',
         'tqdm', 'tensorboardx', 'easydict',
-        'pyyaml', 'halpecocotools',
+        'pyyaml', 'halpecocotools @ git+https://github.com/NickCao/HalpeCOCOAPI.git',
         'torch>=1.1.0', 'torchvision>=0.3.0',
-        'munkres', 'timm==0.1.20', 'natsort'
+        'munkres', 'timm==0.1.20', 'natsort',
+        'cython_bbox @ git+https://github.com/yanfengliu/cython_bbox.git'
     ]
     # official pycocotools doesn't support Windows, we will install it by third-party git repository later
     if platform.system() != 'Windows':
@@ -216,8 +217,4 @@ if __name__ == '__main__':
     if platform.system() == 'Windows' and not is_installed('pycocotools'):
         print("\nInstall third-party pycocotools for Windows...")
         cmd = 'python -m pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI'
-        os.system(cmd)
-    if not is_installed('cython_bbox'):
-        print("\nInstall `cython_bbox`...")
-        cmd = 'python -m pip install git+https://github.com/yanfengliu/cython_bbox.git'
         os.system(cmd)
